@@ -6,6 +6,9 @@ RAW_PATH = "tourism_project/data/tourism.csv"
 df = pd.read_csv(RAW_PATH)
 df = df.drop_duplicates().reset_index(drop=True)
 
+# Correct the inconsistent Gender value before modelling.
+df["Gender"] = df["Gender"].replace("Fe Male", "Female")
+
 # Remove identifier/index columns that should not be used for prediction.
 df = df.drop(columns=["CustomerID", "Unnamed: 0"], errors="ignore")
 
