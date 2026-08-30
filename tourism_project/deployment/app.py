@@ -31,7 +31,7 @@ Occupation = st.selectbox(
     "Occupation",
     ["Salaried", "Free Lancer", "Small Business", "Large Business"],
 )
-Gender = st.selectbox("Gender", ["Male", "Female", "Fe Male"])
+Gender = st.selectbox("Gender", ["Male", "Female"])
 NumberOfPersonVisiting = st.number_input(
     "Number of Persons Visiting", 1, 10, 2
 )
